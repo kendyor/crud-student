@@ -1,0 +1,26 @@
+<div class="col-md-6 student-container">
+  <h2 style="margin: auto"> Estudiantes</h2>
+  <button class="btn btn-danger" style="width:100px" (click)="addStudent()"> Add</button>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th class="hidden">Id</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Edad</th>
+      <th>Código Estudiante</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let student of students">
+      <td class="hidden">{{student.id}}</td>
+      <td>{{student.nombre}}</td>
+      <td>{{student.apellido}}</td>
+      <td>{{student.edad}}</td>
+      <td>{{student.codigoStudent}}</td>
+      <td><button class="btn btn-success" (click)="deleteStudent(student)"> Delete</button>
+        <button class="btn btn-success" (click)="editStudent(student)" style="margin-left: 20px;"> Edit</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
